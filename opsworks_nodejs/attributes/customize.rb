@@ -9,7 +9,4 @@
 # The following shows how to override the Nodejs version:
 #
 #normal[:opsworks_nodejs][:version] = '0.10.21'
-
-template File.join(deploy[:deploy_to], "shared","app.env") do
-  source "app.env.erb"
-end
+default[:opsworks_nodejs][:npm_install_options] = ''
